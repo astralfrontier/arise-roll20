@@ -1,4 +1,4 @@
-# MEGALOS Roll20
+# Arise Roll20
 
 This is a toolkit for producing Roll20 character sheets using modern(ish) web development technologies.
 
@@ -15,7 +15,7 @@ Run `npm install` to install dependencies.
 
 Edit `package.json` and set the following fields:
 
-- `name` should be the short name of your game, e.g. `megalos`
+- `name` should be the short name of your game, e.g. `arise`
 - `author` should be in the form `Your Name <youremailaddress@domain.com>`
 - `description` should be your Roll20 numeric ID
 
@@ -43,9 +43,9 @@ You can copy the HTML and CSS into a game if you have a Pro account:
 
 1. Create a new game at https://app.roll20.net/campaigns/new
 2. For "pick a character sheet", choose "Custom" at the top, and click "Create game" at the bottom
-3. Download `megalos.css` and `megalos.html` from the releases page, https://github.com/astralfrontier/megalos-roll20/releases
+3. Download `arise.css` and `arise.html` from the releases page, https://github.com/astralfrontier/megalos-roll20/releases
 4. On your new game's front page, click Settings > Game Settings
-5. Paste the contents of `megalos.html` into the "HTML Layout" tab at the bottom, ditto `megalos.css` into "CSS Styling"
+5. Paste the contents of `arise.html` into the "HTML Layout" tab at the bottom, ditto `arise.css` into "CSS Styling"
 6. Click "Save Changes"
 
 You can publish your sheets to Roll20's official library via Git: https://cybersphere.me/publishing-sheets-to-github/
