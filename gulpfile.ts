@@ -68,7 +68,7 @@ function css(cb: GulpCallback) {
     .pipe(dest(OUTPUT_DIR))
 }
 
-// TODO postcss
+// TODO postcss https://www.npmjs.com/package/postcss-image-inliner
 
 exports.createSheet = parallel(
   createSheetJson,
