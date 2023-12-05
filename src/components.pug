@@ -16,7 +16,17 @@ mixin attribute_numeric(attr, label)
   .has-text-centered
     label= label
     div
-      input.input.attribute-numeric(type="number" name=attr)
+      input.input.attribute-numeric(type="number" name=attr)&attributes(attributes)
+      if block
+        block
+
+mixin attribute_numeric_max(attr, label)
+  .has-text-centered
+    label= label
+    div
+      input.input.attribute-numeric(type="number" name=attr)&attributes(attributes)
+      span= " / "
+      input.input.attribute-numeric(type="number" name=`${attr}_max` readonly=true)
       if block
         block
 
@@ -24,6 +34,6 @@ mixin attribute_checkbox(attr, label)
   .has-text-centered
     label= label
     div
-      input.input(type="checkbox" name=attr) 
+      input.input(type="checkbox" name=attr)&attributes(attributes)
       if block
         block

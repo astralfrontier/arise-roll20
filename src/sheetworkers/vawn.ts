@@ -18,8 +18,6 @@ for (let attribute of vawn_local) {
       const condition_attribute = `${attr}_condition`
 
       getAttrs([attr, condition_attribute, ...skills], (values) => {
-        console.log('getAttrs: values')
-        console.dir(values)
         let newValue = Math.floor(parseInt(values[attr_base] || '01') / 10)
         if (values[condition_attribute] == 'on') {
           newValue = newValue - 2
@@ -33,8 +31,6 @@ for (let attribute of vawn_local) {
             parseInt(values[skill] || '0') + newValue
           }`
         }
-        console.log('setAttrs: values')
-        console.dir(vawn_updated)
         setAttrs(vawn_updated)
       })
     }
@@ -44,9 +40,7 @@ for (let attribute of vawn_local) {
 on('clicked:vawn', (event) => {
   const name = event.htmlAttributes['data-attr-name']
   const attr = event.htmlAttributes['data-attr-value']
-  console.dir({ name, attr })
   getAttrs([attr], (values) => {
-    console.dir(values)
     const value = values[attr]
     const template = `&{template:default} {{name=${name}}} {{Result=[[3d6 + ${value}]]}}`
     startRoll(template, (outcome) => {

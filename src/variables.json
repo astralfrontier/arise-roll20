@@ -20,5 +20,31 @@
       "condition": "Angry",
       "skills": ["Create", "Discover", "Recall", "Watch"]
     }
+  ],
+  "derived": [
+    {
+      "vawn_attr": "agility",
+      "vawn_label": "Agi",
+      "attr": "pdef",
+      "label": "PDEF"
+    },
+    {
+      "vawn_attr": "agility",
+      "vawn_label": "Agi",
+      "attr": "spd",
+      "label": "SPD"
+    },
+    {
+      "vawn_attr": "will",
+      "vawn_label": "Will",
+      "attr": "mdef",
+      "label": "MDEF"
+    },
+    {
+      "vawn_attr": "will",
+      "vawn_label": "Will",
+      "attr": "res",
+      "label": "RES"
+    }
   ]
 }

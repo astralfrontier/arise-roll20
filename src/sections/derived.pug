@@ -1,0 +1,39 @@
+//- ATTRIBUTES:
+//-
+//-  * attr_hp, attr_hp_max
+//-  * attr_mp, attr_mp_max
+//-  * attr_ab - computed, cannot be edited
+//-  * attr_mb - computed, cannot be edited
+//-  * pdef_base - from discipline
+//-  * pdef_eq - from equipment
+//-  * pdef - computed, cannot be edited
+//-  * mdef_base - from discipline
+//-  * mdef_eq - from equipment
+//-  * mdef - computed, cannot be edited
+//-  * res_base - from discipline
+//-  * res_eq - from equipment
+//-  * res - computed, cannot be edited
+//-  * spd_base - from discipline
+//-  * spd_eq - from equipment
+//-  * spd - computed, cannot be edited
+
++section("Derived")
+  .columns.is-gapless
+    .column.is-one-quarter
+      +attribute_numeric(`attr_hp_base`, "Base")
+    .column.is-one-quarter
+      +attribute_numeric_max(`attr_hp`, "HP")
+    .column.is-one-quarter
+      +attribute_numeric(`attr_mp_base`, "Base")
+    .column.is-one-quarter
+      +attribute_numeric_max(`attr_mp`, "MP")
+  each entry in derived
+    .columns.is-gapless
+      .column.is-one-quarter
+        +attribute_numeric(`attr_vawn_${entry.vawn_attr}_mod`, entry.vawn_label)(readonly="true")
+      .column.is-one-quarter
+        +attribute_numeric(`attr_${entry.attr}_base`, "Base")
+      .column.is-one-quarter
+        +attribute_numeric(`attr_${entry.attr}_eq`, "Eq")
+      .column.is-one-quarter
+        +attribute_numeric(`attr_${entry.attr}`, entry.label)(readonly="true")
