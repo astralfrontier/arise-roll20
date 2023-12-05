@@ -66,7 +66,7 @@ function createSheetPreview(cb: GulpCallback) {
 function css(cb: GulpCallback) {
   const plugins: any[] = [
     imageInliner({
-      assetPaths: [],
+      assetPaths: ['./assets'],
       maxFileSize: 10240,
     }),
     purgecss({
