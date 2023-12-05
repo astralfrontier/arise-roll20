@@ -6,19 +6,22 @@
 //-  * attr_vawn_*_skill_* - e.g. attr_skill_force - the ranks in that skill (default to zero)
 //-  * attr_vawn_*_skill_*_mod - e.g. attr_skill_force_mod - skill ranks plus controlling attribute modifier
 
+//- ACTIONS
+//-  * act_vawn - data-attr-name contains the label e.g. "Vigor", data-attr-value contains the attribute to look up for a value
+
 +section("Attributes")
   each attribute in vawn
     .columns.is-gapless
       .column.is-2
         +attribute_numeric(`attr_vawn_${attribute.name.toLowerCase()}`, attribute.name)
-          button.button(type="action" name="act_vawn" data-attr-name=`attr_vawn_${attribute.name.toLowerCase()}_mod`)
+          button.button(type="action" name="act_vawn" data-attr-name=attribute.name data-attr-value=`vawn_${attribute.name.toLowerCase()}_mod`)
             span(name=`attr_vawn_${attribute.name.toLowerCase()}_mod`)
       .column.is-2
         +attribute_checkbox(`attr_vawn_${attribute.name.toLowerCase()}_condition`, attribute.condition)
       each skill in attribute.skills
         .column.is-2
           +attribute_numeric(`attr_vawn_${attribute.name.toLowerCase()}_skill_${skill.toLowerCase()}`, skill)
-            button.button(type="action" name="act_skill" data-attr-name=`attr_vawn_${attribute.name.toLowerCase()}_skill_${skill.toLowerCase()}_mod`)
+            button.button(type="action" name="act_vawn" data-attr-name=skill data-attr-value=`vawn_${attribute.name.toLowerCase()}_skill_${skill.toLowerCase()}_mod`)
               span(name=`attr_vawn_${attribute.name.toLowerCase()}_skill_${skill.toLowerCase()}_mod`)
 
 //- TODO:

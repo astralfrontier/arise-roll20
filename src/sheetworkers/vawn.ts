@@ -40,3 +40,18 @@ for (let attribute of vawn_local) {
     }
   )
 }
+
+on('clicked:vawn', (event) => {
+  const name = event.htmlAttributes['data-attr-name']
+  const attr = event.htmlAttributes['data-attr-value']
+  console.dir({ name, attr })
+  getAttrs([attr], (values) => {
+    console.dir(values)
+    const value = values[attr]
+    const template = `&{template:default} {{name=${name}}} {{Result=[[3d6 + ${value}]]}}`
+    startRoll(template, (outcome) => {
+      const rollId = outcome.rollId
+      finishRoll(rollId, {})
+    })
+  })
+})
