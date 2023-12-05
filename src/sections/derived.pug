@@ -27,13 +27,27 @@
       +attribute_numeric(`attr_mp_base`, "Base")
     .column.is-one-quarter
       +attribute_numeric_max(`attr_mp`, "MP")
+
+  .columns.is-gapless
+    .column.is-4
+    .column.is-2.has-text-centered
+      strong Attr
+    .column.is-2.has-text-centered
+      strong Base
+    .column.is-2.has-text-centered
+      strong Eq
+    .column.is-2.has-text-centered
+      strong Total
+
   each entry in derived
     .columns.is-gapless
-      .column.is-one-quarter
-        +attribute_numeric(`attr_vawn_${entry.vawn_attr}_mod`, entry.vawn_label)(readonly="true")
-      .column.is-one-quarter
-        +attribute_numeric(`attr_${entry.attr}_base`, "Base")
-      .column.is-one-quarter
-        +attribute_numeric(`attr_${entry.attr}_eq`, "Eq")
-      .column.is-one-quarter
-        +attribute_numeric(`attr_${entry.attr}`, entry.label)(readonly="true")
+      .column.is-4
+        strong= entry.label
+      .column.is-2
+        +attribute_numeric(`attr_vawn_${entry.vawn_attr}_mod`)(readonly="true")
+      .column.is-2
+        +attribute_numeric(`attr_${entry.attr}_base`)
+      .column.is-2
+        +attribute_numeric(`attr_${entry.attr}_eq`)
+      .column.is-2
+        +attribute_numeric(`attr_${entry.attr}`)(readonly="true")

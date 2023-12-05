@@ -10,11 +10,21 @@ mixin section(title)
       .noctis-section-body
       block
 
+mixin attribute_text(attr, label)
+  .has-text-centered
+    if label
+      label= label
+    div
+      input.input.attribute-text(type="text" name=attr)&attributes(attributes)
+      if block
+        block
+
 //- A numeric input with a label
 //- "attr" is the full attribute name, e.g "attr_vigor"
 mixin attribute_numeric(attr, label)
   .has-text-centered
-    label= label
+    if label
+      label= label
     div
       input.input.attribute-numeric(type="number" name=attr)&attributes(attributes)
       if block
@@ -22,18 +32,20 @@ mixin attribute_numeric(attr, label)
 
 mixin attribute_numeric_max(attr, label)
   .has-text-centered
-    label= label
+    if label
+      label= label
     div
       input.input.attribute-numeric(type="number" name=attr)&attributes(attributes)
       span= " / "
-      input.input.attribute-numeric(type="number" name=`${attr}_max` readonly=true)
+      input.input.attribute-numeric(type="number" name=`${attr}_max` readonly="true")
       if block
         block
 
 mixin attribute_checkbox(attr, label)
   .has-text-centered
-    label= label
+    if label
+      label= label
     div
-      input.input(type="checkbox" name=attr)&attributes(attributes)
+      input.input.attribute-checkbox(type="checkbox" name=attr)&attributes(attributes)
       if block
         block

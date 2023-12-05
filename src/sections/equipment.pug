@@ -1,0 +1,49 @@
+//- ATTRIBUTES:
+//-
+//-  * attr_equip_head
+//-  * attr_equip_body
+//-  * attr_equip_legs
+//-  * attr_equip_acc
+//-  * attr_load
+//-  * attr_load_light
+//-  * attr_load_medium
+//-  * attr_load_heavy
+//-
+//- Each slot attribute has a corresponding *_page attribute
+
+-
+  var equipment = [
+    {label: "Head", attr: "attr_equip_head"},
+    {label: "Body", attr: "attr_equip_body"},
+    {label: "Legs", attr: "attr_equip_legs"},
+    {label: "Acc.", attr: "attr_equip_acc"},
+  ]
+
++section("Equipment")
+  .columns.is-gapless
+    .column.is-3.has-text-centered
+      strong Slot
+    .column.is-7
+      strong Name
+    .column.is-2.has-text-centered
+      strong Page
+  each entry in equipment
+    .columns.is-gapless
+      .column.is-3.has-text-centered= entry.label
+      .column.is-7
+        +attribute_text(entry.attr)
+      .column.is-2
+        +attribute_numeric(`${entry.attr}_page`)
+  hr
+  .columns.is-gapless
+    .column.is-4
+      br
+      strong Total Load
+    .column.is-2
+      +attribute_numeric(`attr_load`, "Current")
+    .column.is-2
+      +attribute_numeric(`attr_load_light`, "Light")
+    .column.is-2
+      +attribute_numeric(`attr_load_medium`, "Medium")
+    .column.is-2
+      +attribute_numeric(`attr_load_heavy`, "Heavy")

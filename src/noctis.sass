@@ -13,10 +13,6 @@ $form-border: thin solid black
   // General styling
   font-family: "Verdana", "Arial"
 
-  .container
-    margin: 0px auto
-    max-width: 960px
-
   .sheet
     padding: 1em
 
@@ -25,6 +21,10 @@ $form-border: thin solid black
     position: static
     padding: 0.5rem
     background-image: url('./assets/paper-texture-1-cream-100-thumbnail.webp')
+    border-top: solid #eee
+    border-left: solid black
+    border-right: thick solid black
+    border-bottom: thick solid black
 
   .noctis-section-title
     @include outlined-font
@@ -65,6 +65,10 @@ $form-border: thin solid black
     @include input-closed
     text-align: center
     -moz-appearance: textfield
+    background-color: white
+
+  input[type="number"][readonly="true"]
+    background-color: #ddd
 
   .attribute-numeric
     display: inline
