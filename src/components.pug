@@ -1,1 +1,29 @@
 //- mixin name(attributes)
+
+//- Primary section
+//- Parchment background, optional title
+mixin section(title)
+  section.block.noctis-section
+    if title
+      h3.title.noctis-section-title= title
+    if block
+      .noctis-section-body
+      block
+
+//- A numeric input with a label
+//- "attr" is the full attribute name, e.g "attr_vigor"
+mixin attribute_numeric(attr, label)
+  .has-text-centered
+    label= label
+    div
+      input.input.attribute-numeric(type="number" name=attr)
+      if block
+        block
+
+mixin attribute_checkbox(attr, label)
+  .has-text-centered
+    label= label
+    div
+      input.input(type="checkbox" name=attr) 
+      if block
+        block

@@ -1,3 +1,24 @@
 {
-  "avatar_reactions_enabled": false
+  "vawn": [
+    {
+      "name": "Vigor",
+      "condition": "Hungry",
+      "skills": ["Force", "Demand", "Move", "Survive"]
+    },
+    {
+      "name": "Agility",
+      "condition": "Exhausted",
+      "skills": ["Finesse", "Perform", "Pilot", "Sneak"]
+    },
+    {
+      "name": "Will",
+      "condition": "Afraid",
+      "skills": ["Attune", "Bargain", "Restore", "Talk"]
+    },
+    {
+      "name": "Nous",
+      "condition": "Angry",
+      "skills": ["Create", "Discover", "Recall", "Watch"]
+    }
+  ]
 }

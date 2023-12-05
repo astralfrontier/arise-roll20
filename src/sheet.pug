@@ -11,13 +11,13 @@ include datalists
 .roll20reset
   #arise-sheet
     #noctis
-      .container 
+      .noctis-container 
         +tabs("tabs", [
           {"name": "Character"},
           {"name": "&#x2699;",  "textclass": "emoji"}
         ])
           .sheet.sheet-tab1
-            include sheet-page1
+            include sheet-tab1
           .sheet.sheet-tab2
             p TODO
 
@@ -26,6 +26,7 @@ script(type="text/worker")
   | const variables =
   include variables.json
   include:typescript features/tabs.ts
+  include:typescript sheetworkers/vawn.ts
 
 //- Roll templates
 include rolltemplates
