@@ -6,7 +6,7 @@ import pug from 'pug'
 import sass from 'sass'
 import postcss from 'gulp-postcss'
 import purgecss from '@fullhuman/postcss-purgecss'
-import Vinyl from 'vinyl'
+import imageInliner from 'postcss-image-inliner'
 
 type GulpCallback = (err?: any | undefined) => void
 
@@ -65,6 +65,10 @@ function createSheetPreview(cb: GulpCallback) {
 
 function css(cb: GulpCallback) {
   const plugins: any[] = [
+    imageInliner({
+      assetPaths: [],
+      maxFileSize: 10240,
+    }),
     purgecss({
       content: [path.join(OUTPUT_DIR, SHEET_HTML)],
     }),
