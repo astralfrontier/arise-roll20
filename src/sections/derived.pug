@@ -41,7 +41,7 @@
 
   each entry in derived
     .columns.is-gapless
-      .column.is-4
+      .column.is-4.has-text-right
         strong= entry.label
       .column.is-2
         +attribute_numeric(`attr_vawn_${entry.vawn_attr}_mod`)(readonly="true")
