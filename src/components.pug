@@ -11,7 +11,7 @@ mixin section(title)
       block
 
 mixin attribute_text(attr, label)
-  .has-text-centered
+  .noctis-attribute.has-text-centered
     if label
       label= label
     div
@@ -22,7 +22,7 @@ mixin attribute_text(attr, label)
 //- A numeric input with a label
 //- "attr" is the full attribute name, e.g "attr_vigor"
 mixin attribute_numeric(attr, label)
-  .has-text-centered
+  .noctis-attribute.has-text-centered
     if label
       label= label
     div
@@ -31,7 +31,7 @@ mixin attribute_numeric(attr, label)
         block
 
 mixin attribute_numeric_max(attr, label)
-  .has-text-centered
+  .noctis-attribute.has-text-centered
     if label
       label= label
     div
@@ -42,7 +42,7 @@ mixin attribute_numeric_max(attr, label)
         block
 
 mixin attribute_checkbox(attr, label)
-  .has-text-centered
+  .noctis-attribute.has-text-centered
     if label
       label= label
     div
