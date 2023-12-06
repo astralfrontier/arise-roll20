@@ -1,7 +1,7 @@
 {
   "name": "arise",
   "author": "Bill Garrett <garrett@astralfrontier.org>",
-  "version": "1.4.0",
+  "version": "0.5.0",
   "description": "118980",
   "main": "index.ts",
   "scripts": {
