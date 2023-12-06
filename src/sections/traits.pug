@@ -1,0 +1,18 @@
+//- ATTRIBUTES:
+//-
+//-  * repeating_traits.attr_trait
+//-  * repeating_traits.attr_trait_page
+//-
+
++section("Traits")
+  .columns.is-gapless
+    .column.is-10
+      strong Trait
+    .column.is-2.has-text-centered
+      strong Page
+  fieldset.repeating_traits 
+    .columns.is-gapless.mb-1
+      .column.is-10
+        +attribute_text("attr_trait")
+      .column.is-2
+        +attribute_numeric("attr_trait_page")
