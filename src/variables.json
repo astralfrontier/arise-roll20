@@ -46,5 +46,16 @@
       "attr": "res",
       "label": "RES"
     }
+  ],
+  "aspects": [
+    { "name": "Flame" },
+    { "name": "Wave" },
+    { "name": "Frost" },
+    { "name": "Stone" },
+    { "name": "Aero" },
+    { "name": "Bolt" },
+    { "name": "Bloom" },
+    { "name": "Metal" },
+    { "name": "Never" }
   ]
 }

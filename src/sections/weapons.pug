@@ -1,0 +1,49 @@
+//- ATTRIBUTES:
+//-
+//-  * repeating_weapons.attr_name
+//-  * repeating_weapons.attr_type
+//-  * repeating_weapons.attr_weight
+//-  * repeating_weapons.attr_cost
+//-  * repeating_weapons.attr_attack_cost
+//-  * repeating_weapons.attr_damage_value
+//-  * repeating_weapons.attr_guard_cost
+//-  * repeating_weapons.attr_guard_value
+//-  * repeating_weapons.attr_tags
+//-  * repeating_weapons.attr_page
+//-
+
++section("Weapons")
+  fieldset.repeating_weapons
+    .columns.is-gapless
+      .column.is-4
+        +attribute_text("attr_name", "Name")
+      .column.is-4
+        +attribute_text("attr_type", "Type")
+      .column.is-2
+        +attribute_numeric("attr_weight", "Wt")
+      .column.is-2
+        +attribute_numeric("attr_cost", "Cost")
+    .columns.is-gapless
+      .column.is-4
+        +attribute_text("attr_attack_cost", "Atk Cost")
+      .column.is-4
+        +attribute_text("attr_guard_cost", "G. Cost")
+      .column.is-4
+        +attribute_text("attr_tags", "Tags")
+    .columns.is-gapless
+      .column.is-4
+        +attribute_text("attr_damage_value", "DV")
+      .column.is-4
+        +attribute_text("attr_guard_value", "G. Val")
+      .column.is-4
+        +attribute_numeric("attr_page", "Page")
+  hr
+  .columns.is-gapless
+    .column.is-3.has-text-right
+      strong AB
+    .column.is-3.has-text-right
+      +attribute_numeric(`attr_ab`)
+    .column.is-3.has-text-right
+      strong MB
+    .column.is-3.has-text-right
+      +attribute_numeric(`attr_mb`)

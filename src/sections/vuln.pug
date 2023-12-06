@@ -1,0 +1,11 @@
+//- ATTRIBUTES:
+//-
+//-  * attr_vuln_*
+
++section("Vulnerabilities")
+  .columns.is-gapless.is-multiline
+    each vuln in aspects
+      .column.is-2.has-text-right
+        strong= vuln.name
+      .column.is-2
+          +attribute_numeric(`attr_vuln_${vuln.name.toLowerCase()}`)
