@@ -1,0 +1,28 @@
+//- ATTRIBUTES:
+//-
+//-  * attr_equip_head
+//-  * attr_equip_body
+//-  * attr_equip_legs
+//-  * attr_equip_acc
+//-  * attr_load
+//-  * attr_load_light
+//-  * attr_load_medium
+//-  * attr_load_heavy
+//-
+//- Each slot attribute has a corresponding *_page attribute
+
++section("Warchest")
+  .columns.is-gapless
+    .column.is-4
+      +attribute_textarea(`attr_warchest_gold`, "Gold")
+    .column.is-4
+      +attribute_textarea(`attr_warchest_supplies`, "Supplies")
+    .column.is-4
+      +attribute_textarea(`attr_warchest_materials`, "Materials")
+  .columns.is-gapless
+    .column.is-4
+      strong Max
+    .column.is-4
+      +attribute_text(`attr_warchest_supplies_max`)
+    .column.is-4
+      +attribute_text(`attr_warchest_materials_max`)

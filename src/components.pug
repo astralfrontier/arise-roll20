@@ -19,6 +19,15 @@ mixin attribute_text(attr, label)
       if block
         block
 
+mixin attribute_textarea(attr, label)
+  .noctis-attribute.has-text-centered
+    if label
+      label= label
+    div
+      textarea.textarea(name=attr)&attributes(attributes)
+      if block
+        block
+
 //- A numeric input with a label
 //- "attr" is the full attribute name, e.g "attr_vigor"
 mixin attribute_numeric(attr, label)

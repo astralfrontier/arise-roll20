@@ -17,12 +17,17 @@
       strong Unspent EXP
     .column.is-3.has-text-right
       +attribute_numeric(`attr_unspent_exp`)
+  .columns.is-gapless
+    .column.is-6
+      +attribute_textarea(`attr_player_exp_trigger_minor`, "Minor EXP Trigger")
+    .column.is-6
+      +attribute_textarea(`attr_player_exp_trigger_major`, "Major EXP Trigger")
   hr
   .columns.is-gapless
     .column.is-10
       strong Name
     .column.is-2.has-text-centered
-      strong Lvl
+      strong Lvl      
   fieldset.repeating_disciplines
     .columns.is-gapless
       .column.is-10

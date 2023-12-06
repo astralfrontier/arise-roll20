@@ -1,0 +1,22 @@
+//- ATTRIBUTES:
+//-
+//-  * attr_level
+//-  * attr_unspent_exp
+//-  * repeating_disciplines.attr_name
+//-  * repeating_disciplines.attr_level
+//-  * repeating_disciplines.attr_exp
+//-
+
++section("Party Progress")
+  .columns.is-gapless
+    .column.is-4
+      +attribute_numeric(`attr_party_drive`, "Party Drive")
+    .column.is-4
+      +attribute_numeric(`attr_gm_drive`, "GM Drive")
+    .column.is-4
+      +attribute_numeric(`attr_disc`, "Disc")
+  .columns.is-gapless
+    .column.is-6
+      +attribute_textarea(`attr_party_exp_trigger_minor`, "Minor EXP Trigger")
+    .column.is-6
+      +attribute_textarea(`attr_party_exp_trigger_major`, "Major EXP Trigger")

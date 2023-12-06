@@ -1,0 +1,23 @@
+//- ATTRIBUTES:
+//-
+//-  * repeating_party_inventory.attr_name
+//-  * repeating_party_inventory.attr_ip
+//-  * repeating_party_inventory.attr_page
+//-
+
++section("Armory & Belongings")
+  .columns.is-gapless
+    .column.is-8
+      strong Name
+    .column.is-2.has-text-centered
+      strong IP
+    .column.is-2.has-text-centered
+      strong Page
+  fieldset.repeating_party_inventory 
+    .columns.is-gapless.mb-1
+      .column.is-8
+        +attribute_text("attr_name")
+      .column.is-2
+        +attribute_numeric("attr_ip")
+      .column.is-2
+        +attribute_numeric("attr_page")
