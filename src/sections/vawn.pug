@@ -16,6 +16,11 @@
         +attribute_numeric(`attr_vawn_${attribute.name.toLowerCase()}`, attribute.name)
           button.button(type="action" name="act_vawn" data-attr-name=attribute.name data-attr-value=`vawn_${attribute.name.toLowerCase()}_mod`)
             span(name=`attr_vawn_${attribute.name.toLowerCase()}_mod`)
+        .has-text-centered
+          input.input(type="checkbox" name=`attr_vawn_${attribute.name.toLowerCase()}_training_1`)
+          input.input(type="checkbox" name=`attr_vawn_${attribute.name.toLowerCase()}_training_2`)
+          input.input(type="checkbox" name=`attr_vawn_${attribute.name.toLowerCase()}_training_3`)
+          input.input(type="checkbox" name=`attr_vawn_${attribute.name.toLowerCase()}_training_4`)
       .column.is-2
         +attribute_checkbox(`attr_vawn_${attribute.name.toLowerCase()}_condition`, attribute.condition)
       each skill in attribute.skills
