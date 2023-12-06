@@ -1,0 +1,31 @@
+//- ATTRIBUTES:
+//-
+//-  * attr_level
+//-  * attr_unspent_exp
+//-  * repeating_disciplines.attr_name
+//-  * repeating_disciplines.attr_level
+//-  * repeating_disciplines.attr_exp
+//-
+
++section("Disciplines")
+  .columns.is-gapless
+    .column.is-3.has-text-right
+      strong Lvl
+    .column.is-3.has-text-right
+      +attribute_numeric(`attr_level`)
+    .column.is-3.has-text-right
+      strong Unspent EXP
+    .column.is-3.has-text-right
+      +attribute_numeric(`attr_unspent_exp`)
+  hr
+  .columns.is-gapless
+    .column.is-10
+      strong Name
+    .column.is-2.has-text-centered
+      strong Lvl
+  fieldset.repeating_disciplines
+    .columns.is-gapless
+      .column.is-10
+        +attribute_text("attr_name")
+      .column.is-2
+        +attribute_text("attr_level")
