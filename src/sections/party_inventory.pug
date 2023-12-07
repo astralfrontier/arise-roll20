@@ -7,6 +7,16 @@
 
 +section("Armory & Belongings")
   .columns.is-gapless
+    .column.is-3.has-text-right
+      strong IP
+    .column.is-3
+      +attribute_numeric(`attr_party_ip`)
+    .column.is-3.has-text-right
+      strong Max
+    .column.is-3
+      +attribute_numeric(`attr_party_ip_max`)
+  hr
+  .columns.is-gapless
     .column.is-8
       strong Name
     .column.is-2.has-text-centered
