@@ -3,8 +3,6 @@
 const derived_local = variables['derived']
 
 for (let derived of derived_local) {
-  console.log('setting up derived:')
-  console.dir(derived)
   // If the VAWN attribute changes, or *_base or _eq changes, recompute
   on(
     `change:vawn_${derived.vawn_attr}_mod change:${derived.attr}_base change:${derived.attr}_eq`,
@@ -18,7 +16,6 @@ for (let derived of derived_local) {
         (values) => {
           let total = 0
           for (let value of Object.values(values)) {
-            console.dir(value)
             total = total + parseInt(value || '0')
           }
           let derived_updated: AttributeBundle = {}
