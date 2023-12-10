@@ -1,0 +1,18 @@
+//- ATTRIBUTES:
+//-
+//-  * repeating_statuses.attr_status
+//-  * repeating_statuses.attr_duration
+//-
+
++section("Statuses")
+  .columns.is-gapless
+    .column.is-10
+      strong Status
+    .column.is-2.has-text-centered
+      strong Duration
+  fieldset.repeating_statuses 
+    .columns.is-gapless.mb-1
+      .column.is-10
+        +attribute_text("attr_status")(list="statuses")
+      .column.is-2
+        +attribute_numeric("attr_duration")
