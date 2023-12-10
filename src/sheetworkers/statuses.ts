@@ -11,7 +11,7 @@ on('change:repeating_statuses:status', (event) => {
     const attr = event.sourceAttribute || ''
     const newAttr = attr.replace(/_status$/, '_rules')
     const O: AttributeBundle = {}
-    O[newAttr] = status.description
+    O[newAttr] = status.rules
     console.dir(O)
     setAttrs(O)
   }

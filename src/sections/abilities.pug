@@ -17,9 +17,9 @@
   fieldset.repeating_abilities
     .columns.is-gapless
       .column.is-5
-        +attribute_text("attr_name")
+        +attribute_text("attr_name")(list="abilitynames")
       .column.is-3
-        +attribute_text("attr_type")(list="abilities")
+        +attribute_text("attr_type")(list="abilitytypes")
       .column.is-2
         +attribute_numeric("attr_page")
       .column.is-2

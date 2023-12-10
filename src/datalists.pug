@@ -46,7 +46,11 @@ datalist#disciplines
   option Swordsage
   option White Mage
 
-datalist#abilities 
+datalist#abilitynames
+  each ability in abilities
+    option= ability.name
+
+datalist#abilitytypes 
   option Techne
   option Spell
   option Boost
