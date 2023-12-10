@@ -1,0 +1,11 @@
+input.hidden-attribute[value="on"] ~ .hidden-section
+  display: none !important
+
+input.hidden-attribute:not([value="on"]) ~ .shown-section
+  display: none !important
+
+input.shown-attribute[value="on"] ~ .shown-section
+  display: none !important
+
+input.shown-attribute:not([value="on"]) ~ .hidden-section
+  display: none !important

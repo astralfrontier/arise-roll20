@@ -1,0 +1,20 @@
+//- Usage:
+//-   +hidden_block("attr_foo")
+//-     .hidden-section
+//-     .shown-section
+//-
+//-   hidden_block will reveal the shown section when the attribute is enabled
+//-   shown_block will reveal the hidden section when the attribute is enabled
+//-   Leave .hidden-section or .shown-section empty to show nothing
+
+mixin hidden_block(attr)
+  //- Add a blank div to isolate the CSS selectors
+  div
+    input.hidden-attribute(type="hidden" name=attr)
+    block
+
+mixin shown_block(attr)
+  //- Add a blank div to isolate the CSS selectors
+  div
+    input.shown-attribute(type="hidden" name=attr)
+    block
