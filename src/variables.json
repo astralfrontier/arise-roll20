@@ -57,5 +57,95 @@
     { "name": "Bloom" },
     { "name": "Metal" },
     { "name": "Never" }
+  ],
+  "statuses": [
+    {
+      "name": "BURNING",
+      "description": "Ongoing Flame damage. Lose (1 + VULN) HP. At least one of your actions on your turn must be to Shake It Off (applied to this status) or to enter a BURNING NULL tile. Associated with the Flame aspect."
+    },
+    {
+      "name": "BOUND",
+      "description": "All tiles cost +1 Dash to enter, and all Counters cost +1 die to use. This die's value is not added to the Counter's effect or taken into account in any way. GMCs' Defend Counters cost +1 Counter to use while BOUND. Associated with the Wave aspect."
+    },
+    {
+      "name": "FROZEN",
+      "description": "Ongoing Frost damage. Lose (1 + VULN) HP. Your VULN to Flame and Bolt damage worsens by one step. Associated with the Frost aspect."
+    },
+    {
+      "name": "CRUSHED",
+      "description": "Your base VULN to all damage types worsens by 1 step. If it was already ⯀, it becomes ⯀⯀, meaning you suffer +2⯀ of HP loss to attacks of that type. This applies first before other adjustments to VULN. CRUSHED cancels out and is canceled out by RESISTANT; if you have both statuses, you act as if you had neither. Associated with the Stone aspect."
+    },
+    {
+      "name": "SLOWED",
+      "description": "You suffer –1 SPD and additional Dash movement costs [3] per point instead of [2] per point. GMCs reduce all movement by –1. Associated with the Aero aspect."
+    },
+    {
+      "name": "SHOCKED",
+      "description": "Ongoing Bolt damage. Lose (1 + VULN) HP. Discard (count as immediately spent) any battle dice that roll 1s when you refresh battle dice while SHOCKED. Associated with the Bolt aspect."
+    },
+    {
+      "name": "POISONED",
+      "description": "Ongoing Bloom damage. Lose (1 + VULN) HP. You regain –1 fewer HP from healing effects. Associated with the Bloom aspect."
+    },
+    {
+      "name": "BLEEDING",
+      "description": "Ongoing Metal damage. Lose (1 + VULN) HP. You lose 1 HP if you move more than 1 tile. This also applies to forced movement effects, but not teleportation. Associated with the Metal aspect."
+    },
+    {
+      "name": "ENTROPY",
+      "description": "You suffer a –6 penalty to ATK, MGK, and DEF. If you would benefit from a healing effect, that effect is consumed completely without restoring HP, and ENTROPY's duration is reduced by –(1). Associated with the Never aspect."
+    },
+    {
+      "name": "ENRAGED",
+      "description": "Gain a +10 bonus to ATK and MGK. Associated with the Flame aspect."
+    },
+    {
+      "name": "READIED",
+      "description": "Roll an extra battle die immediately upon receiving this status. This battle die can only be used to pay for Counters. You can only have 1 battle die from READIED at a time. GMCs gain +1 Counter for the turn. Associated with the Wave aspect."
+    },
+    {
+      "name": "FOCUSED",
+      "description": "After refreshing battle dice on your turn, increase the lowest result to a 6. Associated with the Frost aspect."
+    },
+    {
+      "name": "RESISTANT",
+      "description": "Your base VULN to all damage types improves by 1 step. If it’s already ▢ it improves to ▢▢, meaning your reduce HP loss from damage of that type by 2⯀ RESISTANT cancels out and is canceled out by CRUSHED; if you have both statuses, you act as if you had neither. Associated with the Stone aspect."
+    },
+    {
+      "name": "HASTE",
+      "description": "Gain a +1 bonus to SPD and roll a 6th battle die on your turn. GMCs get a “Melee Attack +0” added to the end of their action for the turn. Associated with the Aero aspect."
+    },
+    {
+      "name": "BLINK",
+      "description": "You may teleport 1 at the start or end of each of your turns and you gain a +10 bonus to DEF. Associated with the Bolt aspect."
+    },
+    {
+      "name": "REGEN",
+      "description": "Regain (💿) HP at the start of each of your turns. This does not count as a heal effect. Associated with the Bloom aspect."
+    },
+    {
+      "name": "RETALIATE",
+      "description": "Attackers within your aura lose 1 HP after attacking you. Associated with the Metal aspect."
+    },
+    {
+      "name": "CLOAKED",
+      "description": "You cannot be targeted by enemies, and can only be affected by enemy actions if their AoE affects your tile. You gain a +10 ATK & DEF while CLOAKED; if you use an attack, CLOAKED is removed regardless of its remaining duration. Associated with Never aspect."
+    },
+    {
+      "name": "CASTING",
+      "description": "Creatures gain the CASTING state whenever they have a CAST card present on the turn tracker. While CASTING, a creature cannot willingly move or take any actions until the CAST card has resolved. If any event or effect would move their turn card ahead of their CAST card, their turn card instead moves to just below their CAST card. If a CASTING creature is DOWNED, remove their CAST card from the turn tracker. Creatures cannot normally have more than 1 CAST card on the turn tracker at a given time."
+    },
+    {
+      "name": "DOWNED",
+      "description": "When a Hero or one of their allies has their HP reduced to 0, they become DOWNED. A DOWNED creature cannot take turns, spend battle dice, use actions, counters, boosts, or willingly move. DOWNED creatures can be subjected to forced movement, but only by enemies or as a part of resolving an offensive action against them. DOWNED is a state only experienced by Heroes and their allies— enemies are dead (or “defeated”, if your game uses generally lower narrative stakes for battle) when their HP reaches 0.\nDOWNED creatures immediately remove all statuses and other non-status states other than DOWNED from themselves. They cannot benefit from heal effects. The only effects that can affect them are raise effects, which return them to an amount of HP equal to the raise effect (e.g. “raise 4” would return a DOWNED creature to 4 HP). DOWNED creatures keep their turn card on the turn tracker to track when they have to roll for wounds (p. XX)."
+    },
+    {
+      "name": "FLYING",
+      "description": "FLYING creatures are creatures that are considered to be (or be capable of) constantly flying/hovering in place during battle. Unless otherwise stated, all of their movement is considered flying. They are not affected by ground-based terrain like most difficult terrain or most damaging terrain. Certain spells & abilities also may have more or less of an effect on FLYING creatures."
+    },
+    {
+      "name": "GRAPPLED",
+      "description": "A creature is always GRAPPLED by something— another creature, a piece of terrain, etc. GRAPPLED creatures cannot leave their current tile except by teleporting. A GRAPPLED creature can attempt to break the grapple with a 2🞛 action. Roll an opposed Force check against the grappling creature or effect, which uses its (rank ×💿) as its modifier if it doesn’t have full stats (as is the case with monsters and GMCs)."
+    }
   ]
 }

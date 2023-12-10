@@ -2,17 +2,26 @@
 //-
 //-  * repeating_statuses.attr_status
 //-  * repeating_statuses.attr_duration
+//-  * repeating_statuses.attr_rules
 //-
 
 +section("Statuses")
   .columns.is-gapless
-    .column.is-10
+    .column.is-8
       strong Status
     .column.is-2.has-text-centered
       strong Duration
   fieldset.repeating_statuses 
     .columns.is-gapless.mb-1
-      .column.is-10
+      .column.is-8
         +attribute_text("attr_status")(list="statuses")
       .column.is-2
         +attribute_numeric("attr_duration")
+      .column.is-2
+        input.input(type="checkbox" name="attr_reveal")
+        button.noctis-button-announce(type="roll" name="announce_statusr" value="&{template:default} {{name=@{status}}} {{duration=@{duration}}} {{rules=@{rules}}}")
+    +hidden_block("attr_reveal")
+      .shown-section
+        .columns.is-gapless
+          .column.is-full
+            textarea.textarea(name="attr_rules")
