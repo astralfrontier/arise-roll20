@@ -3,20 +3,30 @@
 //-  * repeating_abilities.attr_name
 //-  * repeating_abilities.attr_type
 //-  * repeating_abilities.attr_page
+//-  * repeating_abilities.attr_rules
 
 +section("Abilities")
   .columns.is-gapless
-    .column.is-6
+    .column.is-5
       strong Name
-    .column.is-4
+    .column.is-3
       strong Type
     .column.is-2.has-text-centered
       strong Page
+    .column.is-2
   fieldset.repeating_abilities
     .columns.is-gapless
-      .column.is-6
+      .column.is-5
         +attribute_text("attr_name")
-      .column.is-4
+      .column.is-3
         +attribute_text("attr_type")(list="abilities")
       .column.is-2
         +attribute_numeric("attr_page")
+      .column.is-2
+        input.input(type="checkbox" name="attr_reveal")
+        button.noctis-button-announce(type="roll" name="announce_power" value="&{template:default} {{name=@{name}}} {{type=@{type}}} {{rules=@{rules}}}")
+    +hidden_block("attr_reveal")
+      .shown-section
+        .columns.is-gapless
+          .column.is-full
+            textarea.textarea(name="attr_rules")
