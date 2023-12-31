@@ -1,0 +1,25 @@
+//- ATTRIBUTES:
+//-
+//-  * repeating_partystory.attr_name
+//-  * repeating_partystory.attr_arc
+//-  * repeating_partystory.attr_done
+//-
+
++section("Story Track")
+  .columns.is-gapless
+    .column.is-1.has-text-center
+      strong Arc
+    .column.is-1
+    .column.is-10
+      strong Beat
+  fieldset.repeating_partystory 
+    .columns.is-gapless.mb-1
+      .column.is-1
+        select(name="attr_arc")
+          each arcletter in ["A", "B", "C"]
+            each indx in [1, 2, 3]
+              option= `${arcletter}${indx}`
+      .column.is-1
+        +attribute_checkbox("attr_done")
+      .column.is-10
+        +attribute_text("attr_name")
