@@ -9,6 +9,10 @@ $form-border: thin solid black
 @mixin outlined-font
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000
 
+@mixin noctis-clickable
+  border: $form-border
+  background-color: rgb(112, 219, 219)
+
 #noctis
   // General styling
   font-family: "Verdana", "Arial"
@@ -91,6 +95,9 @@ $form-border: thin solid black
 
   .btn.repcontrol_del
     padding: 4px 10px
+
+  button[type="action"], .btn.repcontrol_add, .btn.repcontrol_edit, .btn.repcontrol_del
+    @include noctis-clickable
 
   button.d6::before
     font-family: "dicefontd6"
