@@ -19,13 +19,15 @@
 
 +section("Derived")
   .columns.is-gapless
-    .column.is-one-quarter
+    .column.is-2
       +attribute_numeric(`attr_hp_base`, "Base")
-    .column.is-one-quarter
+    .column.is-2
+      +attribute_numeric(`attr_hp_wounds`, "Wounds")
+    .column.is-3
       +attribute_numeric_max(`attr_hp`, "HP")
-    .column.is-one-quarter
+    .column.is-2
       +attribute_numeric(`attr_mp_base`, "Base")
-    .column.is-one-quarter
+    .column.is-3
       +attribute_numeric_max(`attr_mp`, "MP")
 
   .columns.is-gapless

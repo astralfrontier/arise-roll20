@@ -27,12 +27,13 @@ for (let derived of derived_local) {
   )
 }
 
-on(`change:vawn_vigor_mod change:hp_base`, (_event) => {
-  getAttrs(['vawn_vigor_mod', 'hp_base'], (values) => {
+on(`change:vawn_vigor_mod change:hp_wounds change:hp_base`, (_event) => {
+  getAttrs(['vawn_vigor_mod', 'hp_wounds', 'hp_base'], (values) => {
     setAttrs({
       hp_max: `${
         parseInt(values['vawn_vigor_mod'] || '0') +
-        parseInt(values['hp_base'] || '0')
+        parseInt(values['hp_base'] || '0') -
+        parseInt(values['hp_wounds'] || '0')
       }`,
     })
   })
