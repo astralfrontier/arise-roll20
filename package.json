@@ -34,7 +34,7 @@
     "@types/pug": "^2.0.10",
     "@types/sass": "^1.45.0",
     "gulp": "^4.0.2",
-    "gulp-cli": "^2.3.0",
+    "gulp-cli": "^3.0.0",
     "gulp-postcss": "^10.0.0",
     "postcss": "^8.4.38",
     "postcss-image-inliner": "^7.0.1",
