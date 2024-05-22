@@ -38,7 +38,7 @@
     "gulp-postcss": "^10.0.0",
     "postcss": "^8.4.38",
     "postcss-image-inliner": "^7.0.1",
-    "purgecss": "^5.0.0",
+    "purgecss": "^6.0.0",
     "ts-node": "^10.9.2"
   }
 }
